@@ -1,0 +1,27 @@
+<?php
+
+$servername = "localhost";
+$username = "username";
+$password = "password";
+$dbname = "MonarchTrade";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+
+// Add New Tutor Service to Tutor Table
+$sql = "INSERT INTO Tutor (feeTutor, descriptionTutor, courseSpecialtyTutor, ratingTutor, postAgeTutor)
+VALUES (fee, description, courseSpecialty, rating, postAge)";
+
+if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+$conn->close();
+?>
