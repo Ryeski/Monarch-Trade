@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<style>
+body {
+  font-family: Arial;
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
+<body>
+
+<h3>Item Posting Information</h3>
+
+<div class="container">
+  <form action="/action_page.php">
+    <label for="ptitle">Posting Title</label>
+    <input type="text" id="ptitle" name="postingtitle" placeholder="Posting Title">
+    
+    <label for="yesno">On Campus?</label>
+    <select id="yesno" name="yesno">
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+
+	<p>
+    <label>Item Description</label><textarea> </textarea>
+    </p>
+    
+    <p>
+    <label>Item Image</label><input type="file" id="myFile" name="filename">
+	</p>
+
+    
+    Book Item: <input type="checkbox" id="myCheck"  onclick="myFunction()">
+
+<p id="text" style="display:none">
+<label for="author">Author:</label>
+  <input type="text" id="author" placeholder="Enter author's name" name="author">
+<label for="isbn">ISBN:</label>
+  <input type="text" id="isbn" placeholder="Enter ISBN" name="isbn">
+<label for="edition">Edition:</label>
+  <input type="text" id="edition" placeholder="Enter book edition" name="edition">
+</p>
+
+<script>
+function myFunction() {
+  var checkBox = document.getElementById("myCheck");
+  var text = document.getElementById("text");
+  if (checkBox.checked == true){
+    text.style.display = "block";
+  } else {
+     text.style.display = "none";
+  }
+}
+</script>
+  
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+</body>
+</html>
