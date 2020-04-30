@@ -5,11 +5,20 @@
 </head>
 <body>
 
+<div class="navbar">
+	<a class="active" href="home.html"> <b>HOME</b></a>
+	<a href="register.html"> <b>MISCELLANEOUS</b></a>
+	<a href="register.html"> <b>TEXTBOOK</b></a>
+	<a href="register.html"> <b>TUTOR</b></a>
+	<a href="itemPosting.html"> <b>SELL ITEM</b></a>
+
+</div>
+
 <h1 class="itemTitle">
 	<span class="itemTitleText">
-		<span id="itemTextOnly">Sample Title</span>
+		<span id="itemTextOnly">Plushie Tibbers Keychain</span>
 		-
-		<span class="price">$Sample Price</span>
+		<span class="price">$5</span>
 	</span>
 </h1>
 
@@ -22,7 +31,7 @@
 <br><br>
 
 <div class="itemDescription">
-	Sample Item Description
+	Duplicate mystery box items, selling the extra one.
 	<br>
 	<button type="Submit">Contact Seller</button>
 </div>
@@ -31,6 +40,38 @@
 
 
 <style>
+
+	.navbar{
+		float: left;
+		color: #F9F9F9;
+		text-decoration: none;
+		width: 100%;
+		font-size: 11px;
+		text-transform: uppercase;
+		background-color: #003057;
+	}
+	.navbar a {
+		float: left;
+		padding: 32px;
+		color: #F9F9F9;
+		text-decoration: none;
+	}
+
+	.navbar a:hover{
+		border-bottom-style: solid;
+		border-color: #40c5ff;
+	}
+	.navbar a.active {
+		border-bottom-style: solid;
+		border-color: #40c5ff;
+		overflow: auto;
+	}
+
+	*{
+		margin: 0px;
+	}
+
+	.user_dropdown:hover .user_dropdown-content {display: block;}
 
     body{
         margin: 0px;
@@ -64,4 +105,3 @@
 </style>
 
 </html>
-
