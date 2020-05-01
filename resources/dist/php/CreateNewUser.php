@@ -14,14 +14,19 @@ if ($conn->connect_error) {
 
 
 // Add New User To Site
-$sql = "INSERT INTO User (userFirstName, userLastName, userUIN, userType, userEmail)
-VALUES (firstName, lastname, uin, type, email)";
+$Name = $POST['username']
+$Email = $POST['email']
+$Password = $POST['password']
+
+$sql = "INSERT INTO User (userName, userEmail, userPassword)
+VALUES ('$Name', '$Email', '$Password')";
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
-
+header("refresh:2; url=accountRegistration.html")
+    
 $conn->close();
 ?>
